@@ -1,0 +1,86 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+.navbar-desktop {
+  display: grid;
+  grid-template-rows: 3fr 9fr;
+  grid-template-areas:
+    "shipping-info"
+    "main-menu";
+}
+
+.menu-mobile {
+  width: 130px;
+}
+
+@media (max-width: 640px) {
+  .navbar-desktop {
+    display: none;
+  }
+}
+
+.category-menu {
+  width: 450px;
+}
+
+.card-product {
+  transition: all 0.2s ease-out;
+}
+
+.card-product:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-out;
+}
+
+.card-product:active {
+  transform: scale(1.1);
+  transition: all 0.2s ease-out;
+}
+
+.sidebar {
+  z-index: +1;
+}
+
+.content-detail {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-areas: "content-left content-right";
+}
