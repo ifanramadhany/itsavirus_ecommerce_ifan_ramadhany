@@ -9,14 +9,14 @@ export default function HomePage() {
   return (
     <div className="relative min-h-screen">
       {/* mobile menu bar */}
-      <div className="p-2 text-gray-700 flex justify-end sm:hidden">
+      <div className="p-6 text-gray-700 flex justify-end sm:hidden">
         <button
           onClick={() => setSideBarMobile(!sideBarMobile)}
           className="p-1 hover:text-gray-800 hover:bg-gray-300 text-gray-100 bg-gray-600 rounded"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
+            className="h-7 w-7"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -35,7 +35,7 @@ export default function HomePage() {
       <div
         className={`${
           sideBarMobile
-            ? "sidebar md:hidden lg:hidden border-r border-gray-500 bg-gray-200 w-40 absolute inset-y-0 left-0 transform translate-x-0 transtition duration-200 ease-in-out"
+            ? "sidebar md:hidden lg:hidden border-r border-gray-500 bg-gray-200 w-40 absolute inset-y-0 left-0 transform translate-x-0 transtition duration-200 ease-in-out h-full"
             : "sidebar md:hidden lg:hidden border-r border-gray-500 bg-gray-200 w-40 absolute inset-y-0 left-0 transform -translate-x-full transtition duration-200 ease-in-out"
         }`}
       >
@@ -194,9 +194,9 @@ export default function HomePage() {
         <div className="h-28 flex justify-center items-center">
           <span className="text-4xl font-bold">New Releases</span>
         </div>
-        <div className="ml-12 flex flex-wrap justify-start h-full">
+        <div className="card-container flex flex-wrap justify-start h-full">
           {/* product card */}
-          <div className="card-product h-auto w-64 mb-8 mx-7 cursor-pointer">
+          <div className="card-product h-auto w-64 mb-8 cursor-pointer">
             <img src={nikeSneakers} alt="" />
             <div className="">
               <div className="flex justify-between">
@@ -207,7 +207,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="card-product h-auto w-64 mb-8 mx-7 cursor-pointer">
+          <div className="card-product h-auto w-64 mb-8 cursor-pointer">
             <img src={nikeSneakers} alt="" />
             <div className="">
               <div className="flex justify-between">
@@ -218,7 +218,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="card-product h-auto w-64 mb-8 mx-7 cursor-pointer">
+          <div className="card-product h-auto w-64 mb-8 cursor-pointer">
             <img src={nikeSneakers} alt="" />
             <div className="">
               <div className="flex justify-between">
@@ -229,7 +229,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="card-product h-auto w-64 mb-8 mx-7 cursor-pointer">
+          <div className="card-product h-auto w-64 mb-8 cursor-pointer">
             <img src={nikeSneakers} alt="" />
             <div className="">
               <div className="flex justify-between">
@@ -240,7 +240,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="card-product h-auto w-64 mb-8 mx-7 cursor-pointer">
+          <div className="card-product h-auto w-64 mb-8 cursor-pointer">
             <img src={nikeSneakers} alt="" />
             <div className="">
               <div className="flex justify-between">
@@ -251,7 +251,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="card-product h-auto w-64 mb-8 mx-7 cursor-pointer">
+          <div className="card-product h-auto w-64 mb-8 cursor-pointer">
             <img src={nikeSneakers} alt="" />
             <div className="">
               <div className="flex justify-between">
@@ -261,6 +261,34 @@ export default function HomePage() {
               <span className="text-gray-500">Men Shoes</span>
             </div>
           </div>
+
+          <div className="card-product h-auto w-64 mb-8 cursor-pointer">
+            <img src={nikeSneakers} alt="" />
+            <div className="">
+              <div className="flex justify-between">
+                <span className="font-medium">NIKE AIR FORCE 1</span>
+                <span className="font-bold">$30</span>
+              </div>
+              <span className="text-gray-500">Men Shoes</span>
+            </div>
+          </div>
+
+          <div className="card-product h-auto w-64 mb-8 cursor-pointer">
+            <img src={nikeSneakers} alt="" />
+            <div className="">
+              <div className="flex justify-between">
+                <span className="font-medium">NIKE AIR FORCE 1</span>
+                <span className="font-bold">$30</span>
+              </div>
+              <span className="text-gray-500">Men Shoes</span>
+            </div>
+          </div>
+
+          
+
+          
+
+          
 
           
 
