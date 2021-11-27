@@ -4,40 +4,37 @@ import { useHistory } from "react-router-dom";
 import { NavbarDesktop, BagComponent } from "../components";
 import { useSelector } from "react-redux";
 
-
 export default function UserBagPage() {
   const history = useHistory();
   const [sideBarMobile, setSideBarMobile] = useState(false);
-  const { userBag } = useSelector(
-    (state) => state.productState
-  );
+  const { userBag } = useSelector((state) => state.productState);
 
   const toHomePage = () => history.push("/");
   const goBack = () => history.goBack();
-  const toUserBag = () => history.push("/user-bag")
-  
-  const clearAll = () => {
-    userBag.length = 0
-    toHomePage()
-  }
+  const toUserBag = () => history.push("/user-bag");
 
-  
+  const clearAll = () => {
+    userBag.length = 0;
+    toHomePage();
+  };
+
   let amount = [];
-  userBag.map(el => amount.push(el.price))
-  const sum = amount.reduce(function(a, b) { return a + b; }, 0); //256
-  
-  
+  userBag.map((el) => amount.push(el.price));
+  const sum = amount.reduce(function (a, b) {
+    return a + b;
+  }, 0);
+
   return (
     <div className="relative min-h-screen">
       {/* mobile menu bar */}
-      <div className="mx-10 py-2 text-gray-700 flex justify-between sm:hidden">
+      <div className="px-2 py-2 text-gray-700 flex justify-between sm:hidden">
         <button
           onClick={goBack}
           className="p-1 hover:text-gray-800 hover:bg-gray-300 text-gray-100 bg-gray-600 rounded"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-7 w-7"
+            className="h-8 w-8"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -57,7 +54,7 @@ export default function UserBagPage() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-7 w-7"
+            className="h-8 w-8"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -90,9 +87,7 @@ export default function UserBagPage() {
 
         {/* menu sidebar  */}
         <div className="h-full flex flex-col items-center space-y-4">
-        <button class="menu-mobile btn btn-sm"
-            onClick={toHomePage}
-          >
+          <button class="menu-mobile btn btn-sm" onClick={toHomePage}>
             Home
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -126,9 +121,7 @@ export default function UserBagPage() {
             </svg>
           </button>
 
-          <button class="menu-mobile btn btn-sm"
-            onClick={toUserBag}
-          >
+          <button class="menu-mobile btn btn-sm" onClick={toUserBag}>
             Your Bag
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -186,15 +179,16 @@ export default function UserBagPage() {
             </thead>
             <tbody>
               {
-                userBag.map((item, index) => (
-                  <BagComponent
-                    key={index}
-                    item={item}
-                  >
-                  </BagComponent>
+                (userBag.length === 0 && (
+                  <div className="w-full h-40 flex justify-center items-center">
+                    <span className="text-xl font-bold">Your bag is Empty</span>
+                  </div>
                 ))
               }
 
+              {userBag.map((item, index) => (
+                <BagComponent key={index} item={item}></BagComponent>
+              ))}
             </tbody>
           </table>
 
@@ -206,29 +200,30 @@ export default function UserBagPage() {
           </div>
 
           <div className="h-12 mt-2 mb-20 flex justify-end">
-            <button class="btn btn-sm w-96 h-12 flex justify-between rounded-none"
-              onClick={clearAll}
-            >
-              Pay Now
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                class="inline-block w-6 h-6 ml-2 stroke-current"
+            <div className="w-96">
+              <button
+                class="btn btn-sm h-12 w-full flex justify-between rounded-none"
+                onClick={clearAll}
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                ></path>
-              </svg>
-            </button>
+                Pay Now
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  class="inline-block w-6 h-6 ml-2 stroke-current"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  ></path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
 }
-
-
