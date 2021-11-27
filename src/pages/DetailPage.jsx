@@ -71,14 +71,14 @@ export default function DetailPage() {
   return (
     <div className="relative min-h-screen">
       {/* mobile menu bar */}
-      <div className="mx-10 py-2 text-gray-700 flex justify-between sm:hidden">
+      <div className="px-2 py-2 text-gray-700 flex justify-between sm:hidden">
         <button
           onClick={goBack}
           className="p-1 hover:text-gray-800 hover:bg-gray-300 text-gray-100 bg-gray-600 rounded"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-7 w-7"
+            className="h-8 w-8"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -98,7 +98,7 @@ export default function DetailPage() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-7 w-7"
+            className="h-8 w-8"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -197,7 +197,7 @@ export default function DetailPage() {
           ) : (
             <>
               <div className="my-10 flex flex-col md:flex-row lg:flex-row">
-                <div className="w-96">
+                <div className="sm:w-72 md:w-96 lg:w-96">
                   <ImageGallery
                     items={images}
                     showNav={false}

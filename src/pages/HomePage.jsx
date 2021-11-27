@@ -28,14 +28,14 @@ export default function HomePage() {
   return (
     <div className="relative min-h-screen">
       {/* mobile menu bar */}
-      <div className="mx-10 py-2 text-gray-700 flex justify-end sm:hidden">
+      <div className="py-2 px-2 text-gray-700 flex justify-end sm:hidden">
         <button
           onClick={() => setSideBarMobile(!sideBarMobile)}
           className="p-1 hover:text-gray-800 hover:bg-gray-300 text-gray-100 bg-gray-600 rounded"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-7 w-7"
+            className="h-8 w-8"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
