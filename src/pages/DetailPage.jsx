@@ -13,6 +13,14 @@ export default function DetailPage() {
   const { productById, isLoading, isError, userBag } = useSelector(
     (state) => state.productState
   );
+  
+  // forceUpdate hook
+  function useForceUpdate() {
+    const [value, setValue] = useState(0); // integer state
+    return () => setValue((value) => value + 1); // update the state to force render
+  }
+
+  const forceUpdate = useForceUpdate();
 
   // console.log(productById, "ini productById");
 
@@ -21,13 +29,11 @@ export default function DetailPage() {
   const toUserBag = () => history.push("/user-bag");
 
   const addToUserBag = () => {
-    console.log(userBag, 'anjayy');
-    userBag.push(productById)
-  }
+    forceUpdate();
+    userBag.push(productById);
+  };
 
-  useEffect(() => {
-    
-  }, [userBag]);
+  useEffect(() => {}, [userBag]);
 
   const images = [
     {
