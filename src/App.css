@@ -82,6 +82,7 @@
 
 .sidebar {
   z-index: +1;
+  height: 100%;
 }
 
 .content-detail {
@@ -103,3 +104,14 @@
   width: 100%;
   height: 100%;
 }
+
+.image-bag {
+  max-height: 150px;
+
+}
+
+table {
+  border-collapse:separate; 
+  border-spacing: 0 5px;
+}
+
