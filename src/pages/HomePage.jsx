@@ -23,7 +23,7 @@ export default function HomePage() {
     dispatch(fetchPoducts());
   }, [dispatch]);
 
-  console.log(products);
+  // console.log(products);
 
   return (
     <div className="relative min-h-screen">

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import nikelogo from "../assets/nikelogo.png";
 import { useHistory } from "react-router-dom";
-import nikeSneakers from "../assets/air-max-95.jpeg";
 import { NavbarDesktop, BagComponent } from "../components";
 import { useSelector } from "react-redux";
 
@@ -16,8 +15,6 @@ export default function UserBagPage() {
   const toHomePage = () => history.push("/");
   const goBack = () => history.goBack();
   const toUserBag = () => history.push("/user-bag")
-
-  console.log(userBag, "isiunya awkadkj");
   
   const clearAll = () => {
     userBag.length = 0
