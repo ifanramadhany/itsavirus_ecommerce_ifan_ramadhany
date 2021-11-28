@@ -13,8 +13,8 @@ export default function DetailPage() {
   const { productById, isLoading, isError, userBag } = useSelector(
     (state) => state.productState
   );
-  
-  // forceUpdate hook
+
+  // forceUpdate hook 
   function useForceUpdate() {
     const [value, setValue] = useState(0); // integer state
     return () => setValue((value) => value + 1); // update the state to force render
@@ -131,13 +131,13 @@ export default function DetailPage() {
 
         {/* menu sidebar  */}
         <div className="h-full flex flex-col items-center space-y-4">
-          <button class="menu-mobile btn btn-sm" onClick={toHomePage}>
+          <button className="menu-mobile btn btn-sm" onClick={toHomePage}>
             Home
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              class="inline-block w-4 h-4 ml-2 stroke-current"
+              className="inline-block w-4 h-4 ml-2 stroke-current"
             >
               <path
                 stroke-linecap="round"
@@ -148,13 +148,13 @@ export default function DetailPage() {
             </svg>
           </button>
 
-          <button class="menu-mobile btn btn-sm">
+          <button className="menu-mobile btn btn-sm">
             Profile
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              class="inline-block w-4 h-4 ml-2 stroke-current"
+              className="inline-block w-4 h-4 ml-2 stroke-current"
             >
               <path
                 stroke-linecap="round"
@@ -165,13 +165,13 @@ export default function DetailPage() {
             </svg>
           </button>
 
-          <button class="menu-mobile btn btn-sm" onClick={toUserBag}>
+          <button className="menu-mobile btn btn-sm" onClick={toUserBag}>
             Your Bag
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              class="inline-block w-4 h-4 ml-2 stroke-current"
+              className="inline-block w-4 h-4 ml-2 stroke-current"
             >
               <path
                 stroke-linecap="round"
@@ -190,6 +190,11 @@ export default function DetailPage() {
       {/* content  */}
       <div className="flex-1">
         <div className="mx-10">
+          {isError ? (
+            <div className="mb-10 h-96 flex justify-center items-center">
+              <span className="text-xl font-bold">Something went wrong</span>
+            </div>
+          ) : null}
           {isLoading ? (
             <div className="mb-10 h-96 flex justify-center items-center">
               <ReactLoading type="spin" color="#374151" />
@@ -229,7 +234,7 @@ export default function DetailPage() {
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-14 w-14"
+                        className="h-14 w-14"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
@@ -276,7 +281,7 @@ export default function DetailPage() {
                 <div className="flex w-30 justify-center items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
+                    className="h-6 w-6"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -294,13 +299,13 @@ export default function DetailPage() {
                   </span>
                 </div>
 
-                <button class="btn btn-sm" onClick={() => addToUserBag()}>
+                <button className="btn btn-sm" onClick={() => addToUserBag()}>
                   ADD TO BAG - $ {productById.price}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
-                    class="inline-block w-6 h-6 ml-2 stroke-current"
+                    className="inline-block w-6 h-6 ml-2 stroke-current"
                   >
                     <path
                       stroke-linecap="round"
