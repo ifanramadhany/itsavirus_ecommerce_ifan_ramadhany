@@ -6,12 +6,12 @@ export default function BagComponent({ item }) {
     <tr className="">
       <th className="w-2/4">
         <div className="sm:space-y-2 flex-col md:flex md:flex-row md:justify-center md:space-x-4 md:items-center lg:flex lg:flex-row lg:justify-center lg:space-x-4 lg:items-center">
-          <button class="button-small btn btn-circle btn-xs">
+          <button className="button-small btn btn-circle btn-xs">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              class="inline-block w-4 h-4 stroke-current"
+              className="inline-block w-4 h-4 stroke-current"
             >
               <path
                 stroke-linecap="round"
@@ -22,12 +22,12 @@ export default function BagComponent({ item }) {
             </svg>
           </button>
           <div className="flex justify-center">
-            <button class="md:hidden lg:hidden btn btn-circle btn-xs mr-1">
+            <button className="md:hidden lg:hidden btn btn-circle btn-xs mr-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                class="inline-block w-4 h-4 stroke-current"
+                className="inline-block w-4 h-4 stroke-current"
               >
                 <path
                   stroke-linecap="round"

@@ -17,7 +17,7 @@ export default function HomePage() {
   const [sideBarMobile, setSideBarMobile] = useState(false);
 
   const toHomePage = () => history.push("/");
-  const toUserBag = () => history.push("/user-bag")
+  const toUserBag = () => history.push("/user-bag");
 
   useEffect(() => {
     dispatch(fetchPoducts());
@@ -68,15 +68,13 @@ export default function HomePage() {
 
         {/* menu sidebar  */}
         <div className="h-full flex flex-col items-center space-y-4">
-          <button class="menu-mobile btn btn-sm"
-            onClick={toHomePage}
-          >
+          <button className="menu-mobile btn btn-sm" onClick={toHomePage}>
             Home
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              class="inline-block w-4 h-4 ml-2 stroke-current"
+              className="inline-block w-4 h-4 ml-2 stroke-current"
             >
               <path
                 stroke-linecap="round"
@@ -87,13 +85,13 @@ export default function HomePage() {
             </svg>
           </button>
 
-          <button class="menu-mobile btn btn-sm">
+          <button className="menu-mobile btn btn-sm">
             Profile
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              class="inline-block w-4 h-4 ml-2 stroke-current"
+              className="inline-block w-4 h-4 ml-2 stroke-current"
             >
               <path
                 stroke-linecap="round"
@@ -104,15 +102,13 @@ export default function HomePage() {
             </svg>
           </button>
 
-          <button class="menu-mobile btn btn-sm"
-            onClick={toUserBag}
-          >
+          <button className="menu-mobile btn btn-sm" onClick={toUserBag}>
             Your Bag
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              class="inline-block w-4 h-4 ml-2 stroke-current"
+              className="inline-block w-4 h-4 ml-2 stroke-current"
             >
               <path
                 stroke-linecap="round"
@@ -133,19 +129,23 @@ export default function HomePage() {
         <div className="h-28 flex justify-center items-center">
           <span className="text-4xl font-bold">New Releases</span>
         </div>
+        {isError ? (
+          <div className="mb-10 h-96 flex justify-center items-center">
+            <span className="text-xl font-bold">Something went wrong</span>
+          </div>
+        ) : null}
         {isLoading ? (
           <div className="mb-10 h-96 flex justify-center items-center">
             <ReactLoading type="spin" color="#374151" />
           </div>
         ) : (
           <div className="card-container flex flex-wrap justify-start h-full">
-          {/* product card */}
-          {products.map((item, index) => (
-            <ProductCard key={index} i={index + 1} item={item}></ProductCard>
-          ))}
-        </div>
+            {/* product card */}
+            {products.map((item, index) => (
+              <ProductCard key={index} i={index + 1} item={item}></ProductCard>
+            ))}
+          </div>
         )}
-        
       </div>
     </div>
   );

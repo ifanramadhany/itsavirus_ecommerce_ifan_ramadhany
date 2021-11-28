@@ -87,13 +87,13 @@ export default function UserBagPage() {
 
         {/* menu sidebar  */}
         <div className="h-full flex flex-col items-center space-y-4">
-          <button class="menu-mobile btn btn-sm" onClick={toHomePage}>
+          <button className="menu-mobile btn btn-sm" onClick={toHomePage}>
             Home
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              class="inline-block w-4 h-4 ml-2 stroke-current"
+              className="inline-block w-4 h-4 ml-2 stroke-current"
             >
               <path
                 stroke-linecap="round"
@@ -104,13 +104,13 @@ export default function UserBagPage() {
             </svg>
           </button>
 
-          <button class="menu-mobile btn btn-sm">
+          <button className="menu-mobile btn btn-sm">
             Profile
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              class="inline-block w-4 h-4 ml-2 stroke-current"
+              className="inline-block w-4 h-4 ml-2 stroke-current"
             >
               <path
                 stroke-linecap="round"
@@ -121,13 +121,13 @@ export default function UserBagPage() {
             </svg>
           </button>
 
-          <button class="menu-mobile btn btn-sm" onClick={toUserBag}>
+          <button className="menu-mobile btn btn-sm" onClick={toUserBag}>
             Your Bag
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              class="inline-block w-4 h-4 ml-2 stroke-current"
+              className="inline-block w-4 h-4 ml-2 stroke-current"
             >
               <path
                 stroke-linecap="round"
@@ -147,10 +147,10 @@ export default function UserBagPage() {
       <div className="flex-1">
         <div className="h-28 flex justify-center items-center">
           <span className="text-4xl font-bold">Your Bag</span>
-          <button class="relative flex py-1 px-4">
+          <button className="relative flex py-1 px-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-9 w-9"
+              className="h-9 w-9"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -162,7 +162,7 @@ export default function UserBagPage() {
                 d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
               />
             </svg>
-            <span class="absolute font-bold text-white right-0.5 -top-0.5 bg-red-600 px-2 py-0.5 rounded-full border-2 border-white text-sm font-bold">
+            <span className="absolute font-bold text-white right-0.5 -top-0.5 bg-red-600 px-2 py-0.5 rounded-full border-2 border-white text-sm font-bold">
               {userBag.length}
             </span>
           </button>
@@ -202,7 +202,7 @@ export default function UserBagPage() {
           <div className="h-12 mt-2 mb-20 flex justify-end">
             <div className="w-96">
               <button
-                class="btn btn-sm h-12 w-full flex justify-between rounded-none"
+                className="btn btn-sm h-12 w-full flex justify-between rounded-none"
                 onClick={clearAll}
               >
                 Pay Now
@@ -210,7 +210,7 @@ export default function UserBagPage() {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  class="inline-block w-6 h-6 ml-2 stroke-current"
+                  className="inline-block w-6 h-6 ml-2 stroke-current"
                 >
                   <path
                     stroke-linecap="round"

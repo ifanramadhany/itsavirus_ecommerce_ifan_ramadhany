@@ -22,7 +22,7 @@ export default function NavbarDesktop() {
               <span className="text-xs">English</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4"
+                className="h-4 w-4"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -39,7 +39,7 @@ export default function NavbarDesktop() {
             <div className="flex w-30 justify-center items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
+                className="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -78,12 +78,12 @@ export default function NavbarDesktop() {
             </div>
 
             <div className="flex">
-              <button class="relative flex py-1 px-4 text-gray-700"
+              <button className="relative flex py-1 px-4 text-gray-700"
                 onClick={toUserBag}
                 >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6"
+                  className="h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -95,15 +95,15 @@ export default function NavbarDesktop() {
                     d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
                   />
                 </svg>
-                <span class="absolute text-white right-1.5 -top-0.5 bg-red-600 px-1.5 py-0.5 rounded-full border border-white text-xs font-bold">
+                <span className="absolute text-white right-1.5 -top-0.5 bg-red-600 px-1.5 py-0.5 rounded-full border border-white text-xs font-bold">
                   {userBag.length}
                 </span>
               </button>
 
-              <button class="relative flex py-1 px-4 text-gray-700">
+              <button className="relative flex py-1 px-4 text-gray-700">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6"
+                  className="h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
