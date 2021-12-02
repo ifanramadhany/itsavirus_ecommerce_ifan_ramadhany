@@ -73,8 +73,8 @@ export default function UserBagPage() {
       <div
         className={`${
           sideBarMobile
-            ? "sidebar md:hidden lg:hidden border-r border-gray-500 bg-gray-200 w-40 fixed inset-y-0 left-0 transform translate-x-0 transtition duration-200 ease-in-out"
-            : "sidebar-off md:hidden lg:hidden border-r border-gray-500 bg-gray-200 w-40 fixed inset-y-0 left-0 transform -translate-x-full transtition duration-200 ease-in-out"
+            ? "sidebar md:hidden lg:hidden border-r border-gray-500 bg-gray-200 w-40 fixed inset-y-0 left-0 transform translate-x-0 transtition duration-200 ease-in-out h-screen"
+            : "sidebar-off md:hidden lg:hidden border-r border-gray-500 bg-gray-200 w-40 fixed inset-y-0 left-0 transform -translate-x-full transtition duration-200 ease-in-out h-screen"
         }`}
       >
         {/* logo  */}
